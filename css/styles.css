@@ -39,7 +39,25 @@ h2 {
   margin: 0;
   text-transform: uppercase;
   font-size: var(--font-size-large);
-  margin: 0;
+}
+
+h3 {
+  margin: 10px 5px;
+  padding: 10px 5px;  
+}
+
+#wins {
+  background-color:SteelBlue;
+  width: 120px;
+  color: #fff;
+  display: inline-block;
+}
+
+#losses {
+  background-color: SteelBlue;
+  width: 120px;
+  color: #fff;
+  display: inline-block;
 }
 
 h1 {
@@ -201,4 +219,9 @@ button {
 
 .lose a {
   color: var(--color-lose);
+}
+
+#score {
+  display: flex;
+  justify-content: center;
 }

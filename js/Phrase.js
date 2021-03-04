@@ -22,8 +22,6 @@ class Phrase {
 
   checkLetter(letter) {
     for(let i = 0; i < this.phrase.length; i++) {
-      console.log(this.phrase);
-      console.log(this.phrase[i]);
       if(this.phrase[i] === letter) {
         return true;
       } 

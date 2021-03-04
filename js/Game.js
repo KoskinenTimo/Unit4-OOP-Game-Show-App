@@ -13,6 +13,7 @@ class Game {
       new Phrase ("With our Try it Yourself editor you can edit the source code and view the result")
       ];
     this.activePhrase = null;
+    this.gameActive = true;
   }
 
   startGame() {
@@ -54,15 +55,22 @@ class Game {
   }
 
   gameOver(win) {
+    this.gameActive = false;
+    const wins = document.getElementById("wins");
+    const winsCount = parseInt(wins.textContent[wins.textContent.length - 1]);
+    const losses = document.getElementById("losses");
+    const lossesCount = parseInt(losses.textContent[losses.textContent.length - 1]);
     const message = document.getElementById("game-over-message");
     const overlay = document.getElementById("overlay");
     overlay.removeAttribute("class");
     if(win) {
       message.textContent = "YOU WON! CONGRATULATIONS!"      
       overlay.classList.add("win");
+      wins.textContent = `Wins: ${winsCount + 1}`
     } else {
       message.textContent = "YOU LOST! BETTER LUCK NEXT TIME!"
       overlay.classList.add("lose");
+      losses.textContent = `Losses: ${lossesCount + 1}`
     }
     overlay.style.display = "";
   }
