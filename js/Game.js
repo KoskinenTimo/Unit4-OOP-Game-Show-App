@@ -16,17 +16,27 @@ class Game {
     this.gameActive = true;
   }
 
+  /**
+   * 
+   */
   startGame() {
     document.getElementById("overlay").style.display = "none"
     this.activePhrase = this.getRandomPhrase();
     this.activePhrase.addPhraseToDisplay();
   }
 
+  /**
+   * 
+   */
   getRandomPhrase() {
     const randomNumber = Math.floor(Math.random() * this.phrases.length);
     return this.phrases[randomNumber];
   }
 
+  /**
+   * 
+   * @param {*} button 
+   */
   handleInteraction(button) {
     button.disabled = true;
     if(!this.activePhrase.checkLetter(button.textContent)) {
@@ -41,6 +51,9 @@ class Game {
     }
   }
 
+  /**
+   * 
+   */
   removeLife() {
     const tries = document.querySelectorAll(".tries img");
     tries[4 - this.missed].setAttribute("src", "images/lostHeart.png");
@@ -50,10 +63,17 @@ class Game {
     }
   }
 
+  /**
+   * 
+   */
   checkForWin() {
     return !document.querySelectorAll(".hide").length;
   }
 
+  /**
+   * 
+   * @param {*} win 
+   */
   gameOver(win) {
     this.gameActive = false;
     const wins = document.getElementById("wins");

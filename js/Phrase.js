@@ -7,6 +7,9 @@ class Phrase {
     this.phrase = phrase.toLowerCase();
   }
 
+  /**
+   * 
+   */
   addPhraseToDisplay() {
     const phraseList = document.querySelector("#phrase ul");
     for(let i = 0; i < this.phrase.length; i++) {
@@ -20,6 +23,10 @@ class Phrase {
     }
   }
 
+  /**
+   * 
+   * @param {*} letter 
+   */
   checkLetter(letter) {
     for(let i = 0; i < this.phrase.length; i++) {
       if(this.phrase[i] === letter) {
@@ -30,6 +37,10 @@ class Phrase {
     return false;
   }
 
+  /**
+   * 
+   * @param {*} letter 
+   */
   showMatchedLetter(letter) {
     const letterNodes = document.querySelectorAll(`.${letter}`);
     letterNodes.forEach(node => {
