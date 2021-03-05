@@ -32,3 +32,37 @@ body {
   width: 80%;
   margin: auto;
 }
+
+_____________________________________________________________________________________________
+Change weight to bold for the letters on screen to increase visibility.
+.letter {
+  font-weight: bold;
+}
+
+_____________________________________________________________________________________________
+Added the already existing style to btn__reset classes and made my own btn__resetwin when
+a game was won.
+.btn__reset,
+.btn__resetwin {
+}
+
+.btn__reset:active,
+.btn__resetwin:active {
+}
+
+.btn__reset {
+  background: #f7a964;
+}
+
+.btn__resetwin {
+  background: #50d15f;
+
+}
+
+.btn__reset:hover {
+  background: #f7b77f;
+}
+
+.btn__resetwin:hover {
+  background: #80d389;
+}

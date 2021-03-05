@@ -89,15 +89,20 @@ class Game {
     const lossesCount = parseInt(losses.textContent[losses.textContent.length - 1]);
     const message = document.getElementById("game-over-message");
     const overlay = document.getElementById("overlay");
+    const startBtn = document.getElementById("btn__reset");
+    startBtn.removeAttribute("class");
+
     overlay.removeAttribute("class");
     if(win) {
       message.textContent = "YOU WON! CONGRATULATIONS!"      
       overlay.classList.add("win");
       wins.textContent = `Wins: ${winsCount + 1}`
+      startBtn.classList.add("btn__resetwin");
     } else {
       message.textContent = "YOU LOST! BETTER LUCK NEXT TIME!"
       overlay.classList.add("lose");
       losses.textContent = `Losses: ${lossesCount + 1}`
+      startBtn.classList.add("btn__reset");
     }
     overlay.style.display = "";
   }
