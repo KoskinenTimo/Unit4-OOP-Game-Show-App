@@ -17,7 +17,8 @@ class Game {
   }
 
   /**
-   * 
+   * Starts the game by hiding starting overlay and calling for methods to get and build
+   * the game board.
    */
   startGame() {
     document.getElementById("overlay").style.display = "none"
@@ -26,7 +27,7 @@ class Game {
   }
 
   /**
-   * 
+   * Gets 1 phrase randomly from the list of phrase objects.
    */
   getRandomPhrase() {
     const randomNumber = Math.floor(Math.random() * this.phrases.length);
@@ -34,8 +35,11 @@ class Game {
   }
 
   /**
-   * 
-   * @param {*} button 
+   * Takes a button element as parameter. This button content is checked and if the 
+   * content exists on the phrase board, the corresponding letters are shown on board. 
+   * If it doesn't exist, you lose one "heart". Checks after handling the letter-matching
+   * for 'checkForWin()'(all letters on the board are shown).
+   * @param {element} button 
    */
   handleInteraction(button) {
     button.disabled = true;
@@ -52,7 +56,8 @@ class Game {
   }
 
   /**
-   * 
+   * Removes 1 life(heart) from the bar. Checks if there are hearts left, by checking 
+   * 'this.missed' value. If no hearts left = 'this.missed' is 5 and 'this.gameOver(true)'. 
    */
   removeLife() {
     const tries = document.querySelectorAll(".tries img");
@@ -64,15 +69,17 @@ class Game {
   }
 
   /**
-   * 
+   * Checks if all letters on game board are revealed.
    */
   checkForWin() {
     return !document.querySelectorAll(".hide").length;
   }
 
   /**
-   * 
-   * @param {*} win 
+   * Takes in a boolean which indicates if the game was won or lost. True = win, False = loss.
+   * Starting screen overlay is displayed and score count is done according to the result. 
+   * Also a message is added to the start screen that is different for win and loss.
+   * @param {boolean} win 
    */
   gameOver(win) {
     this.gameActive = false;

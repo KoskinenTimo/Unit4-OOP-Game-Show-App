@@ -28,6 +28,7 @@ body {
   flex-direction: column;
   display: flex;
   height: 100vh;
+  margin: 0;
 }
 
 li, ol, ul {
@@ -46,15 +47,9 @@ h3 {
   padding: 10px 5px;  
 }
 
-#wins {
+#wins,
+#losses  {
   background-color:SteelBlue;
-  width: 120px;
-  color: #fff;
-  display: inline-block;
-}
-
-#losses {
-  background-color: SteelBlue;
   width: 120px;
   color: #fff;
   display: inline-block;
@@ -109,6 +104,11 @@ button {
 
 
 /* Phrase */
+
+#phrase {
+  width: 80%;
+  margin: auto;
+}
 
 .letter {
   font-size: var(--font-size-medium);
