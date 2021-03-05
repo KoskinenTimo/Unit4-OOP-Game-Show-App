@@ -2,7 +2,8 @@
 Treehouse Unit 4 project 
 _____________________________________________________________________________________________
 'press enter' text and score board for the starting screen and info text below "qwerty" 
-div is added and styled:
+div is added and styled.
+
 h3 {
   margin: 10px 5px;
   padding: 10px 5px;
@@ -20,13 +21,15 @@ h3 {
 }
 
 _____________________________________________________________________________________________
-Added margin property for body to remove scrollbar from the original style:
+Added margin property for body to remove scrollbar from the original style.
+
 body {
   margin: 0;
 }
 
 _____________________________________________________________________________________________
 Reduced the phrase div width to make it easier to see without moving head on large screen.
+
 body {
 #phrase {
   width: 80%;
@@ -35,6 +38,7 @@ body {
 
 _____________________________________________________________________________________________
 Change weight to bold for the letters on screen to increase visibility.
+
 .letter {
   font-weight: bold;
 }
@@ -42,6 +46,7 @@ Change weight to bold for the letters on screen to increase visibility.
 _____________________________________________________________________________________________
 Added the already existing style to btn__reset classes and made my own btn__resetwin when
 a game was won.
+
 .btn__reset,
 .btn__resetwin {
 }
