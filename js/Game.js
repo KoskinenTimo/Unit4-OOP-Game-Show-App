@@ -6,11 +6,11 @@ class Game {
   constructor() {
     this.missed = 0;
     this.phrases = [
-      new Phrase ("JavaScript is the worlds most popular programming language"),
-      new Phrase ("JavaScript is the programming language of the Web"),
-      new Phrase ("JavaScript is easy to learn"),
-      new Phrase ("This tutorial will teach you JavaScript from basic to advanced"),
-      new Phrase ("With our Try it Yourself editor you can edit the source code and view the result")
+      ("JavaScript is the worlds most popular programming language"),
+      ("JavaScript is the programming language of the Web"),
+      ("JavaScript is easy to learn"),
+      ("This tutorial will teach you JavaScript from basic to advanced"),
+      ("With our Try it Yourself editor you can edit the source code and view the result")
       ];
     this.activePhrase = null;
     this.gameActive = true;
@@ -22,6 +22,7 @@ class Game {
    */
   startGame() {
     document.getElementById("overlay").style.display = "none"
+    this.createPhraseObjects();
     this.activePhrase = this.getRandomPhrase();
     this.activePhrase.addPhraseToDisplay();
   }
@@ -106,4 +107,14 @@ class Game {
     }
     overlay.style.display = "";
   }
+
+  /**
+   * Changes the this.phrases array to an array of Phrase-objects.
+   */
+  createPhraseObjects() {
+    this.phrases.forEach((phrase, index, array) => {
+      array[index] = new Phrase(phrase);
+    });
+  }
 }
+
