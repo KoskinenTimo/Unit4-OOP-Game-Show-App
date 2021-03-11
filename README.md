@@ -1,5 +1,10 @@
 # Unit4-OOP-Game-Show-App
 Treehouse Unit 4 project 
+
+_____________________________________________________________________________________________
+THE GAME CAN BE CONTROLLED BY MOUSE CLICKS OR BY KEYBOARD. GAME STARTS BY PRESSING ENTER AND
+YOU CAN PRESS LETTERS FROM KEYBOARD TO INPUT GUESSES.
+
 _____________________________________________________________________________________________
 'press enter' text and score board for the starting screen and info text below "qwerty" 
 div is added and styled.
