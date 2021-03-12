@@ -42,8 +42,7 @@ class Game {
    * for 'checkForWin()'(all letters on the board are shown).
    * @param {element} button 
    */
-  handleInteraction(button) {
-    
+  handleInteraction(button) {    
     if (button.disabled !== true) {
       if(!this.activePhrase.checkLetter(button.textContent)) {
         button.classList.add("wrong");
