@@ -21,7 +21,6 @@ class Game {
    * the game board.
    */
   startGame() {
-    console.log(this.phrases);
     document.getElementById("overlay").style.display = "none";
     this.activePhrase = this.getRandomPhrase();
     this.activePhrase.addPhraseToDisplay();
